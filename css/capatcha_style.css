@@ -1,0 +1,147 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+:root{
+    /* Font Sizes & Family */
+    /* if we set html's font size 62.5% then 1rem = 10px */
+    
+    --body-font: 'Poppins', sans-serif;
+    
+    --big-font: 4rem;
+    --h1-font: 3.6rem;
+    --h2-font: 2.4rem;
+    --h3-font: 2rem;
+    --h4-font: 1.8rem;
+    --normal-font: 1.6rem;
+    --small-font: 1.4rem;
+    --smaller-font: 1.3rem;
+    
+    /* Font Weight ***/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    
+    /* Color Variables */
+    --primary-color: #748cab;
+    --primary-color-hover: #3e5c76;
+    --text-color: #f0ebd8;
+    --text-color-light: #fff;
+    --border-color: #3e5c76;
+    --white-color: #0d1321;
+    --section-bg: #1d2d44;
+    --info-color: #748cab;
+    
+    /* z-index */
+    --z-overlay: 10;
+    --z-fixed: 100;
+    
+    /* transition */
+    --tran-0-2: 0.2s;
+    --tran-0-3: 0.3s;
+    --tran-0-5: 0.5s;
+}
+    
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('img/constant/robot_2.jpg');
+}
+.container {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 15px 25px 25px;
+  background: var(--text-color);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+header {
+  color: var(--primary-color-hover);
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+.img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.img .bg-img{
+  object-fit: cover;
+  object-position: center;
+}
+
+.input_field {
+  position: relative;
+  height: 45px;
+  margin-top: 15px;
+  width: 100%;
+}
+.refresh_button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: var(--primary-color-hover);
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 4px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+.refresh_button:active {
+  transform: translateY(-50%) scale(0.98);
+}
+.input_field input,
+.button button {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+}
+.input_field input {
+  padding: 0 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.captch_box input {
+  color: var(--section-bg);
+  font-size: 22px;
+  pointer-events: none;
+}
+.captch_input input:focus {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+.message {
+  font-size: 14px;
+  margin: 14px 0;
+  color: var(--primary-color-hover);
+  display: none;
+}
+.message.active {
+  display: block;
+}
+.button button {
+  background: var(--primary-color-hover);
+  color: var(--text-color);
+  cursor: pointer;
+  user-select: none;
+}
+.button button:active {
+  transform: scale(0.99);
+}
+.button.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
